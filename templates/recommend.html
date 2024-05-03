@@ -2,6 +2,10 @@
 <html>
 <head>
 	<title>NEW</title>
+  <link
+      href="{{ url_for('static', filename='styles.css') }}"
+      rel="stylesheet"
+    />
 
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,7 +27,7 @@
 <body id="content">
 	<div class="results">
 	    <center>
-	      <h2 id="name" class="text-uppercase">{{title}}</h2>
+	      <h2 id="name" class="text-uppercase font-extrabold">{{title}}</h2>
 	    </center>
 	</div>
 	<br>
@@ -106,7 +110,7 @@
     </div>
 {% endif %}
 
-  <center>
+  <!-- <center>
     {% if reviews %}
     <h2 style="color:white">USER REVIEWS</h2>
      <div class="col-md-12" style="margin: 0 auto; margin-top:25px;">
@@ -141,7 +145,7 @@
       <h1 style="color:white"> This movie is not released yet. Stay tuned! </h1>
     </div>
     {% endif %}
-  </center>
+  </center> -->
 
       {% if movie_cards|length > 1 %}
 
@@ -164,7 +168,7 @@
           </div>
         </div>
     {% endfor %}
-    </div>
+  </div>
 
     {% endif %}
 
